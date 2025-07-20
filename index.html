@@ -16,7 +16,7 @@
 
         <div class="card">
             <h2>Завантаж свою банківську виписку (CSV)</h2>
-            <p>Завантаж експорт транзакцій з Monobank або іншого банку у форматі CSV.</p>
+            <p>Завантаж експорт транзакцій з Monobank або іншого банку у форматі CSV. Код працює з роздільником кома (`,`) або крапка з комою (`;`).</p>
             <input type="file" id="csvFile" accept=".csv">
             <button id="generateReportBtn">Згенерувати звіт</button>
         </div>
@@ -25,7 +25,10 @@
             <h2>Твій AI-звіт готовий!</h2>
             <div id="reportContent">
                 </div>
-            <button id="downloadReportBtn">Завантажити звіт (PDF)</button>
+            <div class="report-actions">
+                <button id="downloadReportBtn">Завантажити звіт (PDF)</button>
+                <button id="sendToTaxBtn" class="secondary-button">Надіслати у податкову</button>
+            </div>
         </div>
 
         <div class="footer">
