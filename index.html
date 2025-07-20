@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zvit — AI-бухгалтер для ФОПів</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Zvit — AI-бухгалтер для ФОПів</h1>
+        <p class="tagline">Твій звіт. Без бухгалтера. Без податкового пекла.</p>
+
+        <div class="card">
+            <h2>Завантаж свою банківську виписку (CSV)</h2>
+            <p>Завантаж експорт транзакцій з Monobank або іншого банку у форматі CSV.</p>
+            <input type="file" id="csvFile" accept=".csv">
+            <button id="generateReportBtn">Згенерувати звіт</button>
+        </div>
+
+        <div class="card" id="reportResult" style="display: none;">
+            <h2>Твій AI-звіт готовий!</h2>
+            <div id="reportContent">
+                </div>
+            <button id="downloadReportBtn">Завантажити звіт (PDF)</button>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Zvit. Всі права захищені.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
