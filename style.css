@@ -1,30 +1,165 @@
-/* Додай це у кінець існуючого style.css */
-
-.report-actions {
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
     display: flex;
-    justify-content: center; /* Центрує кнопки */
-    gap: 15px; /* Простір між кнопками */
-    margin-top: 25px;
-    flex-wrap: wrap; /* Дозволяє кнопкам переноситись на новий рядок на малих екранах */
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
-.secondary-button {
-    background-color: #3498db; /* Синій колір для другорядної кнопки */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.secondary-button:hover {
+h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tagline {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.card {
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.card h2 {
+    color: #34495e;
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
     background-color: #2980b9;
 }
 
-/* Якщо потрібно, щоб кнопки були рівної ширини */
-.report-actions button {
-    flex-grow: 1; /* Дозволяє кнопкам розтягуватися */
-    max-width: 250px; /* Обмежуємо максимальну ширину */
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto;
+}
+
+button:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#reportContent {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 20px;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Зберігає форматування тексту */
+    text-align: left;
+    font-size: 1.1em;
+    color: #333;
+}
+
+#reportContent p {
+    margin-bottom: 10px;
+}
+
+#reportContent strong {
+    color: #2c3e50;
+}
+
+#downloadReportBtn {
+    background-color: #f39c12;
+    margin-top: 25px;
+}
+
+#downloadReportBtn:hover {
+    background-color: #e67e22;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #7f8c8d;
 }
 
 @media (max-width: 768px) {
-    .report-actions {
-        flex-direction: column; /* Кнопки одна під одною на мобільних */
-        align-items: stretch; /* Розтягуємо кнопки на всю ширину */
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 20px;
     }
 }
